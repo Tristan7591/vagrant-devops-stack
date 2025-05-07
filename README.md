@@ -8,4 +8,5 @@ kill la vm:
 Pour ce connecter en root:
 sudo -i 
 
-Versions pour oracle virtual box
+Versions pour oracle virtual box 
+Modifier les port forward aux besoins, cela permet d'accéder aux services lancer depuis la vm 
