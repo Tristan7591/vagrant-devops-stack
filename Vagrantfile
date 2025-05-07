@@ -11,6 +11,12 @@ Vagrant.configure("2") do |config|
     vb.cpus   = 4
     vb.memory = 8192
   end
+    # ---------- NETWORK ----------
+    config.vm.network "private_network", type: "dhcp"
+    config.vm.network "forwarded_port", guest: 80, host: 8080   
+    config.vm.network "forwarded_port", guest: 3000, host: 3000 
+    config.vm.network "forwarded_port", guest: 8000, host: 8000 
+    config.vm.network "forwarded_port", guest: 5432, host: 5432 
 
   # ---------- NETWORK (optionnel) ----------
   # config.vm.network "forwarded_port", guest: 8080, host: 8080
